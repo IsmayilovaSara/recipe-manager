@@ -3,6 +3,9 @@ import axios from "axios";
 
 const HomePage = () => {
   const [featuredRecipe, setFeaturedRecipe] = useState(null);
+  const [recipes, setRecipes] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredRecipes, setFilteredRecipes] = useState([]);
 
   useEffect(() => {
     // Fetch a featured recipe
@@ -14,6 +17,28 @@ const HomePage = () => {
       })
       .catch((error) => console.error("Error fetching recipes:", error));
   }, []);
+
+  const fetchRecipes = () => {
+    axios.get("http://localhost:5000/recipes")
+      .then((response) => {
+        setRecipes(response.data);
+        setFilteredRecipes(response.data); // Initially show all recipes
+      })
+      .catch((error) => console.error("Error fetching recipes:", error));
+  };
+
+  const handleSearch = (event) => {
+    const query = event.target.value.toLowerCase();
+    setSearchQuery(query);
+    const filtered = recipes.filter((recipe) =>
+      recipe.name.toLowerCase().includes(query) ||
+      recipe.description.toLowerCase().includes(query) ||
+      recipe.ingredients.some((ingredient) =>
+        ingredient.toLowerCase().includes(query)
+      )
+    );
+    setFilteredRecipes(filtered);
+  };
 
   return (
     <div style={{ padding: "20px" }}>

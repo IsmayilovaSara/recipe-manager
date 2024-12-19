@@ -40,6 +40,18 @@ const HomePage = () => {
     setFilteredRecipes(filtered);
   };
 
+
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:5000/recipes/${id}`)
+      .then(() => {
+        // Remove the deleted recipe from the state
+        setRecipes(recipes.filter((recipe) => recipe.id !== id));
+        setFilteredRecipes(filteredRecipes.filter((recipe) => recipe.id !== id));
+      })
+      .catch((error) => console.error("Error deleting recipe:", error));
+  };
+
+
   return (
     <div style={{ padding: "20px" }}>
       <h1>Welcome to the Recipe Manager App</h1>

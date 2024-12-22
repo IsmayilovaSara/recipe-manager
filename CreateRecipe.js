@@ -23,4 +23,32 @@ function CreateRecipe() {
       preparationSteps: form.preparationSteps.split('\n'),
       tags: form.tags.split(','),
       lastUpdated: new Date().toISOString(),
-    };
+    }
+
+    if (isUpdating) {
+      // Update existing recipe
+      axios
+        .put(`http://localhost:3000/recipes/${recipeId}`, updatedRecipe)
+        .then((response) => {
+          console.log('Recipe updated successfully:', response.data);
+          if (onSuccess) onSuccess();
+        })
+        .catch((error) => {
+          console.error('Error updating recipe:', error);
+        });
+    } else {
+      // Create new recipe
+      axios
+        .post('http://localhost:3000/recipes', updatedRecipe)
+        .then((response) => {
+          console.log('Recipe created successfully:', response.data);
+          if (onSuccess) onSuccess();
+        })
+        .catch((error) => {
+          console.error('Error creating recipe:', error);
+        });
+    }
+  }
+
+
+}

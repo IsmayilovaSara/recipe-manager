@@ -48,6 +48,22 @@ function CreateRecipe() {
           console.error('Error creating recipe:', error);
         });
     }
+
+    const handleDelete = () => {
+      // Confirm before deletion
+      if (window.confirm('Are you sure you want to delete this recipe?')) {
+        axios
+          .delete(`http://localhost:3000/recipes/${recipeId}`)
+          .then((response) => {
+            console.log('Recipe deleted successfully:', response.data);
+            if (onSuccess) onSuccess();
+          })
+          .catch((error) => {
+            console.error('Error deleting recipe:', error);
+          });
+      }
+    };
+    
   }
 
 

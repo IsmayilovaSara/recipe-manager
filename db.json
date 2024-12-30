@@ -1,23 +1,22 @@
 {
   "recipes": [
     {
-      "id": 1,
-      "name": "Spaghetti Carbonara",
-      "ingredients": ["Spaghetti", "Eggs", "Parmesan Cheese", "Pancetta", "Pepper"],
-      "steps": [
-        "Cook the spaghetti.",
-        "Fry pancetta until crisp.",
-        "Mix eggs and cheese in a bowl.",
-        "Combine spaghetti, pancetta, and egg mixture."
-      ],
-      "tags": ["Italian", "Quick", "Dinner"]
+      "id": "1",
+      "name": "Spaghetti Bolognese",
+      "ingredients": ["Spaghetti", "Tomato Sauce", "Ground Beef"],
+      "description": "A classic Italian dish.",
+      "steps": ["Boil spaghetti", "Cook ground beef", "Mix with sauce"],
+      "difficulty": "Medium",
+      "lastUpdated": "2024-12-30T10:00:00Z"
     },
     {
-      "id": 2,
-      "name": "Avocado Toast",
-      "ingredients": ["Bread", "Avocado", "Salt", "Pepper"],
-      "steps": ["Toast the bread.", "Mash avocado on top.", "Sprinkle salt and pepper."],
-      "tags": ["Breakfast", "Easy"]
+      "id": "2",
+      "name": "Chicken Curry",
+      "ingredients": ["Chicken", "Curry Powder", "Coconut Milk"],
+      "description": "A savory chicken curry recipe.",
+      "steps": ["Cook chicken", "Add curry powder", "Add coconut milk"],
+      "difficulty": "Hard",
+      "lastUpdated": "2024-12-30T11:00:00Z"
     }
   ]
 }

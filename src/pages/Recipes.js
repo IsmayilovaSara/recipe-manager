@@ -1,29 +1,65 @@
 import React, { useEffect, useState } from 'react';
+import { getRecipes, deleteRecipe } from '../services/recipeService';
 import RecipeCard from '../components/RecipeCard';
+import RecipeForm from '../components/RecipeForm';
 
 const Recipes = () => {
-  const [recipes, setRecipes] = useState([]);
-  const [error, setError] = useState(null);
+    const [recipes, setRecipes] = useState([]);
+    const [selectedRecipe, setSelectedRecipe] = useState(null);
+    const [showForm, setShowForm] = useState(false);
 
-  useEffect(() => {
-    fetch('http://localhost:3000/recipes')
-      .then((response) => {
-        if (!response.ok) throw new Error('Failed to fetch recipes');
-        return response.json();
-      })
-      .then((data) => setRecipes(data))
-      .catch((err) => setError(err.message));
-  }, []);
+    useEffect(() => {
+        loadRecipes();
+    }, []);
 
-  return (
-    <div>
-      <h1>Recipes</h1>
-      {error && <p className="error-message">{error}</p>}
-      {recipes.map((recipe) => (
-        <RecipeCard key={recipe.id} recipe={recipe} />
-      ))}
-    </div>
-  );
+    const loadRecipes = async () => {
+        const data = await getRecipes();
+        setRecipes(data);
+    };
+
+    const handleDelete = async (id) => {
+        await deleteRecipe(id);
+        loadRecipes();
+    };
+
+    const handleEdit = (recipe) => {
+        setSelectedRecipe(recipe);
+        setShowForm(true);
+    };
+
+    const handleCreate = () => {
+        setSelectedRecipe(null);
+        setShowForm(true);
+    };
+
+    return (
+        <div>
+            <h1>Recipes</h1>
+            <button onClick={handleCreate}>Add New Recipe</button>
+            
+            {showForm && (
+                <RecipeForm
+                    recipe={selectedRecipe}
+                    onClose={() => {
+                        setShowForm(false);
+                        loadRecipes();
+                    }}
+                />
+            )}
+
+            <div className="recipe-list">
+                {recipes.map((recipe) => (
+                    <RecipeCard
+                        key={recipe.id}
+                        recipe={recipe}
+                        onDelete={handleDelete}
+                        onEdit={handleEdit}
+                    />
+                ))}
+            </div>
+        </div>
+    );
 };
 
 export default Recipes;
+

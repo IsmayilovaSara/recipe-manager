@@ -13,9 +13,6 @@ const FeaturedRecipe = ({ recipe }) => {
   return (
     <div className="featured-recipe">
       <h2>Featured Recipe</h2>
-
-
-      
       <h3>{recipe.name}</h3>
       <p>{recipe.description}</p>
       <ul>

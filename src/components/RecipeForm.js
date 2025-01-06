@@ -24,15 +24,25 @@ const RecipeForm = ({ recipe, onClose }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        formData.updatedAt = new Date().toLocaleString();
-
-        if (recipe) {
-            await updateRecipe(recipe.id, formData);
-        } else {
-            await addRecipe(formData);
+    
+        // Ensure ingredients and tags are strings before splitting
+        formData.tags = typeof formData.tags === "string" ? formData.tags.split(',').map(tag => tag.trim()) : formData.tags;
+        formData.ingredients = typeof formData.ingredients === "string" ? formData.ingredients.split(',').map(ingredient => ingredient.trim()) : formData.ingredients;
+    
+        formData.updatedAt = new Date().toISOString();
+    
+        try {
+            if (recipe) {
+                await updateRecipe(recipe.id, formData);
+            } else {
+                await addRecipe(formData);
+            }
+            onClose();
+        } catch (error) {
+            console.error('Error submitting the recipe:', error);
         }
-        onClose();
     };
+    
 
     return (
         <div className="recipe-form">

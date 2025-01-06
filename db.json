@@ -3,21 +3,67 @@
     {
       "id": "1",
       "name": "Spaghetti Bolognese",
-      "ingredients": ["Spaghetti", "Tomato Sauce", "Ground Beef"],
+      "ingredients": [
+        "Spaghetti",
+        "Tomato Sauce",
+        "Ground Beef"
+      ],
       "description": "A classic Italian dish.",
-      "steps": ["Boil spaghetti", "Cook ground beef", "Mix with sauce"],
+      "steps": [
+        "Boil spaghetti",
+        "Cook ground beef",
+        "Mix with sauce"
+      ],
       "difficulty": "Medium",
-      "lastUpdated": "2024-12-30T10:00:00Z"
+      "lastUpdated": "2024-12-30T10:00:00Z",
+      "title": "Spaghetti Bolognese",
+      "updatedAt": "2025-01-05T22:59:06.273Z"
     },
     {
       "id": "2",
       "name": "Chicken Curry",
-      "ingredients": ["Chicken", "Curry Powder", "Coconut Milk"],
+      "ingredients": [
+        "Chicken",
+        "Curry Powder",
+        "Coconut Milk"
+      ],
       "description": "A savory chicken curry recipe.",
-      "steps": ["Cook chicken", "Add curry powder", "Add coconut milk"],
+      "steps": [
+        "Cook chicken",
+        "Add curry powder",
+        "Add coconut milk"
+      ],
       "difficulty": "Hard",
-      "lastUpdated": "2024-12-30T11:00:00Z"
+      "lastUpdated": "2024-12-30T11:00:00Z",
+      "title": "Chicken Curry",
+      "updatedAt": "2025-01-05T22:56:47.789Z"
+    },
+    {
+      "title": "Avocado Toast ",
+      "description": "A quick, nutritious snack or breakfast option",
+      "ingredients": [
+        "Bread",
+        "Avocado",
+        "Lemon juice",
+        "salt",
+        "pepper",
+        "chili flakes"
+      ],
+      "steps": "1.Toast Bread slices\n2.Mash the ingredients\n3.Spread it on toast\n",
+      "tags": [
+        "Quick Meal"
+      ],
+      "difficulty": "Easy",
+      "updatedAt": "2025-01-05T23:35:46.754Z",
+      "id": "OR-7zyV"
     }
   ],
-  "messages": [] 
+  "messages": [
+    {
+      "subject": "Recipe suggestion",
+      "email": "test@example.com",
+      "message": "add more quick meal recipes",
+      "id": 1
+    }
+  ]
 }

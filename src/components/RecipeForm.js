@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { addRecipe, updateRecipe } from '../services/recipeService';
+import './RecipeForm.css';
+
 
 const RecipeForm = ({ recipe, onClose }) => {
     const [formData, setFormData] = useState({
@@ -25,9 +27,9 @@ const RecipeForm = ({ recipe, onClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
     
-        // Ensure ingredients and tags are strings before splitting
         formData.tags = typeof formData.tags === "string" ? formData.tags.split(',').map(tag => tag.trim()) : formData.tags;
         formData.ingredients = typeof formData.ingredients === "string" ? formData.ingredients.split(',').map(ingredient => ingredient.trim()) : formData.ingredients;
+        formData.steps = typeof formData.steps === "string" ? formData.steps.split('\n').map(step => step.trim()) : formData.steps;
     
         formData.updatedAt = new Date().toISOString();
     
@@ -42,6 +44,7 @@ const RecipeForm = ({ recipe, onClose }) => {
             console.error('Error submitting the recipe:', error);
         }
     };
+    
     
 
     return (

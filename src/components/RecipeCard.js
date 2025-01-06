@@ -1,4 +1,6 @@
 import React from 'react';
+import './recipeCard.css';
+
 
 const RecipeCard = ({ recipe, onDelete, onEdit }) => {
     const tags = Array.isArray(recipe.tags) ? recipe.tags : [];

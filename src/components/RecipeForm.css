@@ -1,18 +1,56 @@
+.recipe-form {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd;
+}
 
-.featured-recipe {
-    background: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .featured-recipe h3 {
-    margin-top: 0;
-    color: #333;
-  }
-  
-  .featured-recipe ul {
-    padding-left: 20px;
-  }
-  
+.recipe-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.recipe-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #475d5b; /* Matches the navbar accent color */
+}
+
+.recipe-form input,
+.recipe-form textarea,
+.recipe-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.recipe-form input:focus,
+.recipe-form textarea:focus,
+.recipe-form select:focus {
+  border-color: #618685; /* Accent color */
+}
+
+.recipe-form button {
+  background: #475d5b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.recipe-form button:hover {
+  background: #618685;
+}

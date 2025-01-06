@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ContactMe.css';
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ const ContactMe = () => {
       .then((response) => {
         if (response.ok) {
           alert('Message sent successfully!');
-          setFormData({ subject: '', email: '', message: '' }); 
+          setFormData({ subject: '', email: '', message: '' });
         } else {
           alert('Failed to send the message.');
         }
@@ -31,10 +32,10 @@ const ContactMe = () => {
   };
 
   return (
-    <div>
+    <div className="contact-container">
       <h2>Contact Me</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label>Subject:</label>
           <input
             type="text"
@@ -44,7 +45,7 @@ const ContactMe = () => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Email:</label>
           <input
             type="email"
@@ -54,7 +55,7 @@ const ContactMe = () => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Message:</label>
           <textarea
             name="message"

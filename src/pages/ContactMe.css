@@ -1,0 +1,90 @@
+/* Container for the entire form */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Title styling */
+  .contact-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* Form labels */
+  .contact-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #34495e;
+  }
+  
+  /* Input fields styling */
+  .contact-container input,
+  .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Input and textarea focus effect */
+  .contact-container input:focus,
+  .contact-container textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Textarea styling */
+  .contact-container textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  /* Submit button styling */
+  .contact-container button {
+    width: 100%;
+    background: #475d5b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-container button:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 15px;
+    }
+  
+    .contact-container h2 {
+      font-size: 1.8rem;
+    }
+  
+    .contact-container input,
+    .contact-container textarea {
+      font-size: 0.9rem;
+    }
+  
+    .contact-container button {
+      font-size: 0.9rem;
+    }
+  }
+  

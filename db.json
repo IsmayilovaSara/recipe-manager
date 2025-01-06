@@ -17,7 +17,10 @@
       "difficulty": "Medium",
       "lastUpdated": "2024-12-30T10:00:00Z",
       "title": "Spaghetti Bolognese",
-      "updatedAt": "2025-01-05T22:59:06.273Z"
+      "updatedAt": "2025-01-06T20:25:59.316Z",
+      "tags": [
+        "Main Course"
+      ]
     },
     {
       "id": "2",
@@ -36,7 +39,10 @@
       "difficulty": "Hard",
       "lastUpdated": "2024-12-30T11:00:00Z",
       "title": "Chicken Curry",
-      "updatedAt": "2025-01-05T22:56:47.789Z"
+      "updatedAt": "2025-01-06T19:57:26.332Z",
+      "tags": [
+        "Main Course"
+      ]
     },
     {
       "title": "Avocado Toast ",
@@ -49,13 +55,61 @@
         "pepper",
         "chili flakes"
       ],
-      "steps": "1.Toast Bread slices\n2.Mash the ingredients\n3.Spread it on toast\n",
+      "steps": [
+        "Toast Bread slices",
+        "Mash the ingredients",
+        "Spread it on toast"
+      ],
       "tags": [
         "Quick Meal"
       ],
       "difficulty": "Easy",
-      "updatedAt": "2025-01-05T23:35:46.754Z",
+      "updatedAt": "2025-01-06T20:17:32.080Z",
       "id": "OR-7zyV"
+    },
+    {
+      "title": "Grilled Vegetable Panini",
+      "description": "A delicious and healthy sandwich packed with grilled vegetables and melted cheese",
+      "ingredients": [
+        "Sourdough bread",
+        "Zucchini slices",
+        "Bell peppers",
+        "Eggplant slices",
+        "Mozzarella cheese",
+        "Pesto sauce"
+      ],
+      "steps": [
+        "Grill the zucchini",
+        "spread pesto sauce on bread",
+        "layer vegs",
+        "Grill the sandwich"
+      ],
+      "tags": [
+        "Vegetarian"
+      ],
+      "difficulty": "Medium",
+      "updatedAt": "2025-01-06T20:16:41.242Z",
+      "id": "t-0qnq9"
+    },
+    {
+      "title": "Banana Ice Cream",
+      "description": "Quick frozen dessert made with just bananas",
+      "ingredients": [
+        "2 ripe bananas",
+        "milk"
+      ],
+      "steps": [
+        "Slice Bananas and freeze them",
+        "Blend frozen bananas with milk",
+        "Serve immediately"
+      ],
+      "tags": [
+        "Dessert",
+        "Quick Meal"
+      ],
+      "difficulty": "Easy",
+      "updatedAt": "2025-01-06T20:20:24.341Z",
+      "id": "7o5_Ts5"
     }
   ],
   "messages": [

@@ -8,7 +8,7 @@ const RecipeForm = ({ recipe, onClose }) => {
         ingredients: '',
         steps: '',
         tags: '',
-        difficulty: 'Easy'
+        difficulty: 'Easy',
     });
 
     useEffect(() => {

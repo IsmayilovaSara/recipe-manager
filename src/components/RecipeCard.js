@@ -41,4 +41,4 @@ const RecipeCard = ({ recipe, onDelete, onEdit }) => {
     );
 };
 
-export default RecipeCard;
+export default RecipeCard
